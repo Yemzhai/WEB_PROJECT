@@ -1,0 +1,11 @@
+<div class="product-detail">
+  <img src="http://localhost:8000{{ product?.image }}">
+  <h1>{{ product?.name }}</h1>
+  <p class="price">${{ product?.price }}</p>
+  <form #f="ngForm" (ngSubmit)="submitProduct(f)" >
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" ngModel="quantity" id="quantity">
+    <input type="submit"  value="Add to cart">
+  </form>
+  {{ product?.description }}
+</div>
